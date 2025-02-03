@@ -3,6 +3,9 @@ pragma solidity ^0.8.28;
 import  "forge-std/Test.sol";
 import "./interface.sol";
 //cast interface --etherscan-api-key xxx -c mantle  0xe53a90efd263363993a3b41aa29f7dabde1a932d
+
+//模仿 https://learnblockchain.cn/article/9478 , 我只是在練習
+
 contract bedrockAttack is Test {
     // setup, cite: https://app.blocksec.com/explorer/tx/eth/0x725f0d65340c859e0f64e72ca8260220c526c3e0ccde530004160809f6177940?line=54
     address balancerVault = 0xBA12222222228d8Ba445958a75a0704d566BF2C8;
@@ -13,7 +16,7 @@ contract bedrockAttack is Test {
     address uniBTCProxy = 0x047D41F2544B7F63A8e991aF2068a363d210d6Da;  //0x047d_TransparentUpgradeableProxy
 
     function setUp() external {
-        vm.createSelectFork("https://eth-mainnet.g.alchemy.com/v2/Q4EteuUI7E_UcV4vMZuzHqFj3BH6Jc9r", 20836584 - 1);
+        vm.createSelectFork("https://eth-mainnet.g.alchemy.com/v2/***", 20836584 - 1);
         deal(address(this), 1e18);
     }
 
